@@ -532,3 +532,11 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+int
+sys_getprocs(void)
+{
+	cprintf("HAY X PROCESOS CORRIENDO\n");
+	return 0;
+}
+
