@@ -536,7 +536,14 @@ procdump(void)
 int
 sys_getprocs(void)
 {
-	cprintf("HAY X PROCESOS CORRIENDO\n");
+	struct proc *p;
+	int i = 0;
+	for (p = ptable.proc; p < &ptable.proc[NPROC]; p++){
+		if(p -> state != UNUSED){
+			i++;
+		}
+	}
+	cprintf("HAY %d PROCESOS CORRIENDO\n", i);
 	return 0;
 }
 
