@@ -532,3 +532,11 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+int
+sys_systemcall(void)
+{
+	cprintf("systemcall de prueba\n");
+	return 0;
+}
+
